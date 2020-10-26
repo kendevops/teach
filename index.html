@@ -25,13 +25,20 @@
         width: 100%;
       }
 
+      hr {
+        width: 50px;
+        margin: 0 auto;
+        padding: 2px;
+        margin-bottom: 30px;
+        background-color: grey;
+      }
+
       .profile {
         display: flex;
         flex-direction: column;
-        border: 2px solid;
         width: 40%;
         padding: 20px;
-        margin: 10px;
+        margin: 10px 0;
         color: #fff;
         background-color: #191919;
       }
@@ -57,14 +64,96 @@
         text-align: center;
         margin-top: 20px;
       }
-      .experience {
+      p.about {
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .data {
+        display: flex;
+        padding: 5px 10px;
+      }
+      .icon {
+        width: 50px;
+        font-size: 30px;
+        border-radius: 30%;
         border: 2px solid;
+        text-align: center;
+      }
+      .info {
+        padding: 10px;
+        margin-left: 20px;
+      }
+      .lang {
+        display: flex;
+        padding: 10px;
+        width: 400px;
+      }
+      .lang div {
+        width: 120px;
+        padding-left: 20px;
+        /* border: 2px solid; */
+        /* margin: 0 auto; */
+      }
+      .details {
+        border: 2px solid gray;
         width: 60%;
         padding: 20px;
-        margin: 10px;
+        margin: 10px 0;
+      }
+
+      .experience ul, .education {
+        padding-left: 40px;
+        overflow: hidden;
+      }
+      .experience ul li, .education ul li {
+        position: relative;
+        list-style-type: none;
+      }
+
+      .experience ul li:before, .education ul li:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -25px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50px;
+        border: 2px solid;
+        background-color: #000;
+      }
+
+      .experience ul li:after, .education ul li:after {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: -21px;
+        width: 2px;
+        height: 160px;
+        background-color: #000;
+      }
+
+      .experience ul li .date {
+        font-size: 16px;
+        font-weight: 900;
+        margin-bottom: 15px;
+      }
+      .experience ul li .content {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: justify;
       }
       .field {
         margin-top: 20px;
+      }
+      .skills-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .skills-content p{
+        color: #191919;
+        text-align: left;
+        margin-left: 40px;
+        font-size: 15px;
       }
     </style>
   </head>
@@ -79,14 +168,7 @@
         <h1>KENNETH ALADI</h1>
         <h3 class="prof">FrontEnd Developer</h3>
         <h4 class="about">PROFILE</h4>
-        <hr
-          style="
-            width: 50px;
-            margin: 0 auto;
-            padding: 2px;
-            background-color: white;
-          "
-        />
+        <hr />
         <p class="about">
           I am an Experienced Front End Web Developer with a demonstrated
           history of working in the computer software industry. Skilled in HTML,
@@ -99,179 +181,204 @@
         </p>
         <div class="contact">
           <h3 class="about">Contact Details</h3>
-          <hr
-            style="
-              width: 50px;
-              margin: 0 auto;
-              padding: 2px;
-              background-color: white;
-            "
-          />
+          <hr />
           <ul>
-            <li>Email: kendevops@gmail.com</li>
-            <li>Linkedin: https://www.linkedin.com/in/kenneth-aladi/</li>
-            <li>Github: https://github.com/kendevops</li>
-            <li>Phone No: 07033960652</li>
+            <li class="data">
+              <div class="icon">
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+              </div>
+              <div class="info">+2347033960652</div>
+            </li>
+            <li class="data">
+              <div class="icon">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="info">kendevops@gmail.com</div>
+            </li>
+            <li class="data">
+              <div class="icon">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </div>
+              <div class="info">https://www.linkedin.com/in/kenneth-aladi/</div>
+            </li>
+            <li class="data">
+              <div class="icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </div>
+              <div class="info">https://github.com/kendevops</div>
+            </li>
           </ul>
         </div>
         <div class="language">
           <h3 class="about">Languages</h3>
-          <hr
-            style="
-              width: 50px;
-              margin: 0 auto;
-              padding: 2px;
-              background-color: white;
-            "
-          />
+          <hr />
           <ul>
-            <li>English</li>
-            <li>Igbo</li>
+            <li class="lang">
+              <p>English</p>
+              <div class="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </li>
+            <li class="lang">
+              <p>Igbo</p>
+              <div class="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </li>
           </ul>
-        </div>
-        <div class="stars">
-          <div class="star">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </div>
-          <div class="star">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </div>
         </div>
         <div class="hobbies">
           <h3 class="about">Hobbies</h3>
-          <hr
-            style="
-              width: 50px;
-              margin: 0 auto;
-              padding: 2px;
-              background-color: white;
-            "
-          />
+          <hr />
           <p>Reading</p>
           <p>Watching sci-fi movies</p>
           <p>Having an Educative Conversation</p>
           <p>Running</p>
         </div>
       </section>
-      <section class="experience">
-        <h1 class="field">Experience</h1>
-        <hr />
-        <div class="content">
-          <h3>MLH Fellow</h3>
-          <h5>Major League Hacking (Remote)</h5>
-          <p>
-            As part of the inaugural class of MLH Fellows, I contributed to AWS
-            Amplify Open Source projects with a team of 3 other Fellows under
-            the mentorship of a professional software engineer.
-          </p>
-        </div>
-        <div class="content">
-          <h3>Frontend Web Developer</h3>
-          <h5>DreamQube Tech (Remote)</h5>
+      <section class="details">
+        <section class="experience">
+          <h1 class="field">Experience</h1>
+          <hr />
           <ul>
-            <li>Build Front-End Developments using the provide wireframe</li>
-            <li>Learnt about Software Architecture</li>
-            <li>Worked with other teams to build Apps</li>
             <li>
-              Use markup languages like HTML, Styling with CSS3 and Javascript
-              to create user-friendly web pages
+              <div class="date">2020 - 2020</div>
+              <div class="content">
+                <h3>MLH Fellow</h3>
+                <h5>Major League Hacking (Remote)</h5>
+                <p>
+                  As part of the inaugural class of MLH Fellows, I contributed
+                  to AWS Amplify Open Source projects with a team of 3 other
+                  Fellows under the mentorship of a professional software
+                  engineer.
+                </p>
+              </div>
             </li>
-            <li>Networking with Industry Experts</li>
+            <li>
+              <div class="date">2020 - 2020</div>
+              <div class="content">
+                <h3>Frontend Web Developer</h3>
+                <h5>DreamQube Tech (Remote)</h5>
+                <p>
+                  Build Front-End Developments using the provide wireframe,
+                  Learnt about Software Architecture, Worked with other teams to
+                  build Apps, Use markup languages like HTML, Styling with CSS3
+                  and Javascript to create user-friendly web pages, Networking
+                  with Industry Experts.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2020 - 2020</div>
+              <div class="content">
+                <h3>Web Developer</h3>
+                <h5>PrimeSoft</h5>
+                <p>
+                  I am motivated to combine the art of design with the art of
+                  programming. My Responsibilities include translation of the
+                  UI/UX design wireframes to actual code that will produce
+                  visual elements of the application. I work with the UI/UX
+                  designer and bridge the gap between graphical design and
+                  technical implementation, taking an active role on both sides
+                  and defining how the application looks as well as how it
+                  works.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">2020 - 2020</div>
+              <div class="content">
+                <h3>Junior Web Developer</h3>
+                <h5>FSSDS Technologies</h5>
+                <p>
+                  Worked as a productive and positive team member to design,
+                  code, test, report, and debug operations. Successfully
+                  identified, diagnosed, and fixed website problems, including
+                  broken links, typographical errors, and formatting issues.
+                  Helped to achieve a consistent look and visual theme across
+                  the website by promoting uniform fonts, formatting, images,
+                  and layout. Evaluated and became knowledgeable in new
+                  standards, technologies, and trends in website development.
+                </p>
+              </div>
+            </li>
           </ul>
-        </div>
-        <div class="content">
-          <h3>Web Developer</h3>
-          <h5>PrimeSoft</h5>
-          <p>
-            I am motivated to combine the art of design with the art of
-            programming. My Responsibilities include translation of the UI/UX
-            design wireframes to actual code that will produce visual elements
-            of the application. I work with the UI/UX designer and bridge the
-            gap between graphical design and technical implementation, taking an
-            active role on both sides and defining how the application looks as
-            well as how it works.
-          </p>
-        </div>
-        <div class="content">
-          <h3>Junior Web Developer</h3>
-          <h5>FSSDS Technologies</h5>
-          <p>
-            Worked as a productive and positive team member to design, code,
-            test, report, and debug operations. Successfully identified,
-            diagnosed, and fixed website problems, including broken links,
-            typographical errors, and formatting issues. Helped to achieve a
-            consistent look and visual theme across the website by promoting
-            uniform fonts, formatting, images, and layout. Evaluated and became
-            knowledgeable in new standards, technologies, and trends in website
-            development.
-          </p>
-        </div>
-        <h1 class="field">Education</h1>
-        <hr />
-        <div class="content">
-          <h3>Bsc Computer Science</h3>
-          <h5>University of the People</h5>
-          <p>
-            World class univeristy located in United States of America, and is
-            an Open University for education in any part of the world.
-          </p>
-        </div>
-        <h1 class="field">Skills</h1>
-        <hr />
-        <div class="skills-content">
-          <div class="skill-1">
-            <p>HTML & CSS</p>
-            <p>JavaScript</p>
-            <p>ReactJS</p>
-            <p>Material UI</p>
-            <p>Python</p>
-            <p>Git and Github</p>
+        </section>
+        <section class="education">
+          <h1 class="field">Education</h1>
+          <hr />
+          <ul>
+            <li>
+              <div class="content">
+                <h3>Bsc Computer Science</h3>
+                <h5>University of the People</h5>
+                <p>
+                  World class univeristy located in United States of America, and is
+                  an Open University for education in any part of the world.
+                </p>
+            </li>
+          </ul>
+
           </div>
-          <div class="skill-2">
-            <div class="circle">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+        </section>
+        <section class="skills">
+          <h1 class="field">Skills</h1>
+          <hr />
+          <div class="skills-content">
+            <div class="skill-1">
+              <p>HTML & CSS</p>
+              <p>JavaScript</p>
+              <p>ReactJS</p>
+              <p>Material UI</p>
+              <p>Python</p>
+              <p>Git and Github</p>
             </div>
-            <div class="circle">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot-2"></span>
-              <span class="dot-2"></span>
+            <div class="skill-2">
+              <div class="circle">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="circle">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot-2"></span>
+                <span class="dot-2"></span>
+              </div>
+              <div class="circle">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="circle">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot-2"></span>
+              </div>
             </div>
-            <div class="circle">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-            <div class="circle">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot-2"></span>
+            <div class="skill-3">
+              <p style="font-weight: bold">Other Skills</p>
+              <p>Premier Pro (Video Editing)</p>
+              <p>Digital Marketing</p>
+              <p>PhotoShop (Photo Editing)</p>
             </div>
           </div>
-          <div class="skill-3">
-            <p style="font-weight: bold">Other Skills</p>
-            <p>Premier Pro (Video Editing)</p>
-            <p>Digital Marketing</p>
-            <p>PhotoShop (Photo Editing)</p>
-          </div>
-        </div>
+        </section>
       </section>
     </main>
     <footer></footer>
